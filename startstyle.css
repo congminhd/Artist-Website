@@ -1,0 +1,86 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Helvetica, Arial,sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 10vw;
+}
+
+/* Link Wrapper */
+.clickable-area {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+/* Container for image + text */
+.container {
+  display: block;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 50%;
+    left: 25%;
+    /* display: inline-block; */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+/* Character Image */
+.character {
+  width: 100%;
+  max-width: 80vw;
+  height: auto;
+}
+
+/* "Click Me" Text */
+.click-text {
+  position: absolute;
+  top: 10vw;
+  left: 45vw;
+  transform: translate(10px, -50%);
+  font-size: 2vw;
+  font-weight: bold;
+  color: black;
+  white-space: nowrap;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .click-text {
+    position: static;
+    display: block;
+    margin-top: 16px;
+    font-size: 3em;
+    transform: none;
+  }
+
+  .container {
+    display: block;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 80%;
+    left: 10%;
+    /* display: inline-block; */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+}
